@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from '../components/common/SEO';
+import AnimatedBackground from '../components/common/AnimatedBackground';
 import blogData from "../data/blogData";
 import { Link } from "react-router-dom";
 import Hero2 from "../components/sections/Hero2";
@@ -15,6 +16,7 @@ const BlogPage = () => {
 
   return (
     <>
+      <AnimatedBackground />
       <SEO 
         title="Blog - Softsincs | Tech Insights, Tutorials & Industry Updates"
         description="Read the latest articles from Softsincs covering software development, AI, cloud computing, best practices, and technology trends. Expert insights to help your business grow."
@@ -31,7 +33,7 @@ const BlogPage = () => {
         backgroundImage={bgContact}
       />
 
-      <section className="bg-gray-50 dark:bg-gray-100 pt-[130px] pb-20">
+      <section className="bg-white pt-[130px] pb-20">
         <div className="max-w-6xl px-4 mx-auto space-y-12">
           {/* ✅ Featured Blog */}
           <Link
@@ -54,7 +56,7 @@ const BlogPage = () => {
                   : featured.summary ?? "No summary available"}
               </p>
               <div className="mt-4">
-                <span className="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="inline-block bg-white border border-black text-black text-xs font-semibold px-3 py-1 rounded-full">
                   {featured.category || "Blog"}
                 </span>
               </div>
@@ -87,7 +89,7 @@ const BlogPage = () => {
                       : blog.summary ?? "No summary available"}
                   </p>
                   <div className="mt-3">
-                    <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
+                    <span className="text-xs font-medium text-black bg-white border border-black px-2 py-1 rounded">
                       {blog.category || "Blog"}
                     </span>
                   </div>

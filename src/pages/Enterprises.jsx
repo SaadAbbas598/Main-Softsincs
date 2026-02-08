@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from '../components/common/SEO';
+import AnimatedBackground from '../components/common/AnimatedBackground';
 import Hero2 from "../components/sections/Hero2";
 import bgEnterprises from "../assets/Images/background.jpg"; // ✅ Make sure this image exists
 import Services from "../components/sections/Services"; // Optional: reuse with filtered enterprise services
@@ -9,6 +10,7 @@ import ContactSection from "../components/sections/ContactSection";
 const EnterprisesPage = () => {
   return (
     <div>
+      <AnimatedBackground />
       <SEO 
         title="Enterprise Solutions - Softsincs | Scalable Digital Transformation"
         description="Empower your enterprise with Softsincs' scalable software solutions. We provide cloud infrastructure, system integration, AI automation, and enterprise-grade security."
@@ -27,7 +29,7 @@ const EnterprisesPage = () => {
 
       {/* Why Enterprises Trust Us */}
       <section className="max-w-6xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold text-center text-[#2e35d7] mb-10">
+        <h2 className="text-3xl font-bold text-center text-black mb-10">
           Why Enterprises Choose Us
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -38,7 +40,7 @@ const EnterprisesPage = () => {
             { icon: "fas fa-cogs", title: "Process Automation" },
           ].map((item, idx) => (
             <div key={idx} className="bg-white p-6 text-center shadow rounded">
-              <i className={`${item.icon} text-3xl text-[#2e35d7] mb-3`}></i>
+              <i className={`${item.icon} text-3xl text-black mb-3`}></i>
               <h3 className="font-semibold">{item.title}</h3>
             </div>
           ))}

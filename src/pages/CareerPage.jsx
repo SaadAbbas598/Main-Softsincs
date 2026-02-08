@@ -1,6 +1,7 @@
 // src/pages/CareerPage.jsx
 import React from "react";
 import SEO from '../components/common/SEO';
+import AnimatedBackground from '../components/common/AnimatedBackground';
 import Hero2 from "../components/sections/Hero2";
 import CareerSection from "../components/sections/CareerSection";
 import Faq from "../components/sections/Faq"; // Assuming reusable FAQ component
@@ -10,6 +11,7 @@ import bgCareer from "../assets/Images/background.jpg"; // Use any relevant back
 const CareerPage = () => {
   return (
     <>
+      <AnimatedBackground />
       <SEO 
         title="Careers - Softsincs | Join Our Innovative Team"
         description="Explore career opportunities at Softsincs. Join our team of talented developers and innovators. We offer competitive salaries, growth opportunities, and a collaborative environment."
@@ -30,7 +32,7 @@ const CareerPage = () => {
       </div>
 
       <section className="max-w-7xl mx-auto px-6 py-20" id="faq">
-        <h2 className="text-3xl font-extrabold text-indigo-900 mb-8 text-center">
+        <h2 className="text-3xl font-extrabold text-black mb-8 text-center">
           Frequently Asked Questions
         </h2>
         <Faq faqs={careerFaqs} />

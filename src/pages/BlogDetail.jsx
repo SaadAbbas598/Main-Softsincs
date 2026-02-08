@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import AnimatedBackground from '../components/common/AnimatedBackground';
 import blogData from "../data/blogData";
 import Hero2 from "../components/sections/Hero2";
 import bgContact from "../assets/Images/background.jpg";
@@ -18,13 +19,14 @@ const BlogDetail = () => {
           buttonLink="/contact-form"
           backgroundImage={bgContact}
         />
-        <div className="p-10 text-center text-red-600 text-xl">Blog not found</div>
+        <div className="p-10 text-center text-black text-xl">Blog not found</div>
       </>
     );
   }
 
   return (
     <>
+      <AnimatedBackground />
       <Hero2
         smallTitle="Blogs"
         title={blog.title}
@@ -55,7 +57,7 @@ const BlogDetail = () => {
               {blog.tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full"
+                  className="bg-white border border-black text-black text-sm px-3 py-1 rounded-full"
                 >
                   #{tag}
                 </span>
