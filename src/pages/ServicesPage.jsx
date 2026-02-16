@@ -1,15 +1,14 @@
 import React from "react";
 import SEO from '../components/common/SEO';
-import AnimatedBackground from '../components/common/AnimatedBackground';
 import Services from "../components/sections/Services";
 import Hero2 from "../components/sections/Hero2";
-import bgServices from "../assets/Images/background.jpg"; // ✅ Use a relevant image
+import bgServices from "../assets/Images/background.jpg";
 import TechStackSection from "../components/sections/TechStackSection"; 
 import ContactSection from "../components/sections/ContactSection";
+
 const ServicesPage = () => {
   return (
-    <div>
-      <AnimatedBackground />
+    <div className="bg-gradient-to-br from-gray-900 via-slate-900 to-blue-900">
       <SEO 
         title="Our Services - Softsincs | Web, Mobile & AI Development Solutions"
         description="Explore Softsincs' comprehensive software development services including custom web applications, mobile apps, AI solutions, cloud services, and enterprise software. Get expert digital transformation services."
@@ -20,7 +19,7 @@ const ServicesPage = () => {
       <Hero2
         smallTitle="Our Offerings"
         title="We Provide Smart Digital Services"
-        description="From full-stack development to AI-powered solutions, we turn your ideas into reality."
+        description="From full-stack development to AI-powered solutions, we turn your ideas into reality with cutting-edge technology and expert execution."
         buttonText="Get a Free Quote"
         buttonLink="/contact"
         backgroundImage={bgServices}
@@ -30,8 +29,6 @@ const ServicesPage = () => {
       <Services />
       <TechStackSection  />
       <ContactSection />
-
-      
     </div>
   );
 };
